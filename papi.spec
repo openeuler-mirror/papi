@@ -7,7 +7,7 @@ URL:             http://icl.cs.utk.edu/papi/
 Source0:         http://icl.cs.utk.edu/projects/papi/downloads/%{name}-%{version}.tar.gz
 BuildRequires:   autoconf doxygen ncurses-devel gcc-gfortran kernel-headers >= 2.6.32
 BuildRequires:   chrpath lm_sensors-devel libpfm-devel >= 4.6.0-1 libpfm-static >= 4.6.0-1
-BuildRequires:   net-tools rdma-core-devel perl-generators
+BuildRequires:   net-tools rdma-core-devel infiniband-diags-devel perl-generators
 Provides:        papi-libs = %{version}-%{release}
 Obsoletes:       papi-libs < %{version}-%{release}
 
