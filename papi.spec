@@ -1,6 +1,6 @@
 Name:            papi
 Version:         5.6.0
-Release:         8
+Release:         9
 Summary:         Performance Application Programming Interface
 License:         BSD
 URL:             http://icl.cs.utk.edu/papi/
@@ -10,6 +10,7 @@ BuildRequires:   chrpath lm_sensors-devel libpfm-devel >= 4.6.0-1 libpfm-static 
 BuildRequires:   net-tools rdma-core-devel perl-generators
 Provides:        papi-libs = %{version}-%{release}
 Obsoletes:       papi-libs < %{version}-%{release}
+Recommends:      %{name}-help = %{version}-%{release}
 
 Patch0001:       papi-ldflags.patch
 
@@ -87,5 +88,8 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/*.so*
 %{_mandir}/man3/*
 
 %changelog
+* Thu Nov 12 2020 xinghe <xinghe1@huawei.com> - 5.6.0-9
+- add help for Recommends
+
 * Thu Nov 28 2019 liujing<liujing144@huawei.com> - 5.6.0-8
 - Package init
